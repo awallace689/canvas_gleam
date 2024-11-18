@@ -8,7 +8,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf ./dist && gleam run -m build && npm i && npx tsc",
+    "pack": "rm ./*.tgz && npm pack"
   },
   "author": "",
   "license": "ISC",
