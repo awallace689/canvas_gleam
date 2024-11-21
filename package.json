@@ -1,22 +1,22 @@
 {
-  "name": "canvas-gleam",
-  "version": "1.0.0",
-  "description": "[![Package Version](https://img.shields.io/hexpm/v/canvas_gleam)](https://hex.pm/packages/canvas_gleam) [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/canvas_gleam/)",
-  "main": "dist/canvas_gleam.js",
-  "types": "./dist/canvas_gleam.d.ts",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "build": "rm -rf ./dist && gleam run -m build && npm i && npx tsc",
-    "pack": "rm ./*.tgz && npm pack"
-  },
-  "author": "",
-  "license": "ISC",
-  "files": [
-    "dist"
-  ],
-  "devDependencies": {
-    "typescript": "^5.6.3"
-  }
+    "name": "canvas-gleam",
+    "version": "1.0.0",
+    "description": "[![Package Version](https://img.shields.io/hexpm/v/canvas_gleam)](https://hex.pm/packages/canvas_gleam) [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/canvas_gleam/)",
+    "main": "dist/canvas_gleam/canvas_gleam.mjs",
+    "types": "./dist/canvas_gleam/canvas_gleam.d.mts",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "build": "rm -rf ./dist && gleam build && cp -r ./build/dev/javascript ./dist",
+        "pack": "rm ./*.tgz && npm pack"
+    },
+    "author": "",
+    "license": "ISC",
+    "files": [
+        "dist"
+    ],
+    "devDependencies": {
+        "typescript": "^5.6.3"
+    }
 }
